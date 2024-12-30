@@ -20,6 +20,14 @@ Current hair transfer methods struggle to handle diverse and intricate hairstyle
 5. - [x] Training code
 
 ## Getting Started
+### Git Setting
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+cat ~/.ssh/id_ed25519.pub
+# Test Connnection
+ssh -T git@github.com
+```
+
 ### Environment Setup
 Our code is built on the [diffusers](https://github.com/huggingface/diffusers/) version of Stable Diffusion, In our experiments, we use model version v1-5. If you have a diffusers version of [controlnet](https://huggingface.co/docs/diffusers/using-diffusers/controlnet) configured, you can use this repository directly.
 ```shell
@@ -29,13 +37,33 @@ cd Stable-Hair
 
 ### Install Requirements
 ```
-pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu124
+apt update
+apt install -y cmake build-essential python3-dev
+pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cu118
 pip install -r requirements.txt
 ```
 
 ### Pretrained Models
 [Google Drive](https://drive.google.com/drive/folders/1E-8Udfw8S8IorCWhBgS4FajIbqlrWRbQ?usp=drive_link). 
 Download them and save to the directory `models/stage1` and `models/stage2`. 
+Or download from gdown
+```
+mkdir stage1
+cd stage1
+gdown https://drive.google.com/uc?id=1oYNoKPEN0mZpRhZ7s3_xSDlaO209vFn4
+
+cd ..
+mkdir stage1
+cd stage1
+gdown https://drive.google.com/uc?id=15wytQlOe94dF1KZJUwqf0RGKaH9WQZe-
+gdown https://drive.google.com/uc?id=1Uv3l3JCo-aOJbEWR1shINwl2sY5eGcIL
+gdown https://drive.google.com/uc?id=1voeq4Uw9RBv-c4vcfc8GR3MI8Qs0XNNa
+```
+
+Or just run download.sh
+```
+bash ./download.sh
+```
 
 For HF support,
 first 
