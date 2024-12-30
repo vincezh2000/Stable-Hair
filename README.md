@@ -20,6 +20,14 @@ Current hair transfer methods struggle to handle diverse and intricate hairstyle
 5. - [x] Training code
 
 ## Getting Started
+### Git Setting
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+cat ~/.ssh/id_ed25519.pub
+# Test Connnection
+ssh -T git@github.com
+```
+
 ### Environment Setup
 Our code is built on the [diffusers](https://github.com/huggingface/diffusers/) version of Stable Diffusion, In our experiments, we use model version v1-5. If you have a diffusers version of [controlnet](https://huggingface.co/docs/diffusers/using-diffusers/controlnet) configured, you can use this repository directly.
 ```shell
