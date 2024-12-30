@@ -37,6 +37,19 @@ pip install -r requirements.txt
 [Google Drive](https://drive.google.com/drive/folders/1E-8Udfw8S8IorCWhBgS4FajIbqlrWRbQ?usp=drive_link). 
 Download them and save to the directory `models/stage1` and `models/stage2`. 
 
+For HF support,
+first 
+```
+huggingface-cli login
+apt-get update
+apt-get install git-lfs
+git lfs install
+
+git clone https://huggingface.co/vince2000/stable-hair
+
+
+```
+
 ### Inference
 ```python
 python infer_full.py
