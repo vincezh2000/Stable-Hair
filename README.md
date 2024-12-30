@@ -29,13 +29,32 @@ cd Stable-Hair
 
 ### Install Requirements
 ```
-pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu124
+conda install pytorch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 pytorch-cuda=11.8 -c pytorch -c nvidia
+(apt install -y cmake build-essential python3-dev)
 pip install -r requirements.txt
 ```
 
 ### Pretrained Models
 [Google Drive](https://drive.google.com/drive/folders/1E-8Udfw8S8IorCWhBgS4FajIbqlrWRbQ?usp=drive_link). 
 Download them and save to the directory `models/stage1` and `models/stage2`. 
+Or download from gdown
+```
+mkdir stage1
+cd stage1
+gdown https://drive.google.com/uc?id=1oYNoKPEN0mZpRhZ7s3_xSDlaO209vFn4
+
+cd ..
+mkdir stage1
+cd stage1
+gdown https://drive.google.com/uc?id=15wytQlOe94dF1KZJUwqf0RGKaH9WQZe-
+gdown https://drive.google.com/uc?id=1Uv3l3JCo-aOJbEWR1shINwl2sY5eGcIL
+gdown https://drive.google.com/uc?id=1voeq4Uw9RBv-c4vcfc8GR3MI8Qs0XNNa
+```
+
+Or just run download.sh
+```
+bash ./
+```
 
 For HF support,
 first 
